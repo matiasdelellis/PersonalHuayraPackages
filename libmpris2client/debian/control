@@ -1,0 +1,42 @@
+Source: libmpris2client
+Section: libs
+Priority: optional
+Maintainer: Matias De lellis <mati86dl@gmail.com>
+Build-Depends:
+ debhelper (>= 9),
+ libglib2.0-dev,
+ libgtk2.0-dev,
+ intltool,
+Standards-Version: 3.9.5
+Homepage: https://github.com/matiasdelellis/libmpris2client
+Vcs-Browser: https://github.com/matiasdelellis/libmpris2client
+Vcs-Git: https://github.com/matiasdelellis/libmpris2client.git
+
+Package: libmpris2client
+Section: libs
+Architecture: any
+Multi-Arch: same
+Depends: ${shlibs:Depends}, ${misc:Depends}
+Provides:
+ libmpris2client
+Description: Library to control mpris2 compatible players
+ .
+ This package contains the shared libraries.
+
+Package: libmpris2client-dev
+Section: libdevel
+Architecture: any
+Multi-Arch: same
+Depends: ${shlibs:Depends}, ${misc:Depends}
+Description: Library to control mpris2 compatible players (development files)
+ .
+ This package contains the development files.
+
+Package: mpris2-status-icon
+Section: sound
+Architecture: any
+Depends: ${shlibs:Depends}, ${misc:Depends}
+Provides:
+ mpris2-status-icon,
+Description: A tiny client to control mpris2 compatible players in sytray
+
